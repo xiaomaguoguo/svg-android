@@ -50,7 +50,7 @@ If you are drawing the SVG directly on to a Canvas, as opposed to populating an 
 
 {{{
     Canvas canvas;
-    ...
+    // ...
     // Parse the SVG file from the resource
     SVG svg = SVGParser.getSVGFromResource(this, R.raw.android);
     // Get the picture
@@ -58,7 +58,27 @@ If you are drawing the SVG directly on to a Canvas, as opposed to populating an 
     // Draw picture in canvas
     // Note: use transforms such as translate, scale and rotate to position the picture correctly
     canvas.drawPicture(picture);
-    ...
+    // ...
+}}}
+
+*Loading SVGs From Other Sources*
+
+SVGs can also be placed in the project's `assets` directory, and the loaded using the application's asset management facility:
+
+{{{
+        try {
+            final SVG svg = SVGParser.getSVGFromAsset(getAssets(), "android.svg");
+        } catch (IOException e) {
+            // Handle IOException here
+        }
+}}}
+
+Alternatively, an SVG can be loaded from a raw `InputStream` (UTF-8 encoding is assumed):
+
+{{{
+        InputStream input;
+        // ...
+        final SVG svg = SVGParser.getSVGFromInputStream(input);
 }}}
 
 *Color Substitution*
