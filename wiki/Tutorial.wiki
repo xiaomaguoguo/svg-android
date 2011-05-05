@@ -26,9 +26,25 @@ The following code in the `onCreate` method will make the activity render the SV
     }
 }}}
 
+== How to Prepare Your Vector Images ==
+
+This library supports a subset of the [http://www.w3.org/TR/SVGMobile/ SVG Basic 1.1] specification. Typically, you can just load your vector artwork in Illustrator and then _Save As_ the artwork as SVG Basic and it will work fine. These are the features of SVG Basic not supported:
+
+  * All text and font features.
+  * Raster images (bitmaps).
+  * Styles.
+  * Symbols, conditional processing.
+  * Patterns.
+  * Masks, filters and views.
+  * Interactivity, linking, scripting and animation.
+
+If your vector image includes text, you can right-click on the text object in Illustrator and choose _Create Outlines_. This converts the text in to standard paths, which will then work fine with the library.
+
+Not all Illustrator effects (such as drop shadow) will work as they result in the creation of raster images when saved as SVG Basic.
+
 == Some Tricks ==
 
-=== Canvas Drawing ===
+*Canvas Drawing*
 
 If you are drawing the SVG directly on to a Canvas, as opposed to populating an ImageView or some other pre-built container, then just use the `android.graphics.Picture` object instead:
 
@@ -45,9 +61,13 @@ If you are drawing the SVG directly on to a Canvas, as opposed to populating an 
     ...
 }}}
 
-=== Color Substitution ===
+*Color Substitution*
 
 Upon loading the SVG, you can substitute one color in the SVG for another. For example, to make the green Android blue instead:
 
 {{{
+        // 0xFF9FBF3B is the hex code for the existing Android green, 0xFF1756c9 is the new blue color
+        SVG svg = SVGParser.getSVGFromResource(getResources(), R.raw.android, 0xFF9FBF3B, 0xFF1756c9);
 }}}
+
+Future versions of the library will support multiple color-swapping.
