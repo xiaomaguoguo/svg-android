@@ -65,7 +65,7 @@ If you are drawing the SVG directly on to a Canvas, as opposed to populating an 
 
 It is useful when working with an SVG to know the rectangular bounds of the content. The document (artboard) bounds themselves are typically not useful for this, as few artists will size the content to those bounds. Instead, we offer two approaches:
 
- # *Bounds* If there is a layer in the artwork called _bounds_, it will not be drawn. Rather, the first rectangle found in that layer will be interpreted as the bounds of the artwork. This makes it easy for an artist to specify the right bounds for the artwork without the programmer having to do additional work.
+ # *Bounds* If there is a layer in the artwork called _bounds_, it will not be drawn. Rather, the first rectangle found in that layer will be interpreted as the bounds of the artwork. This makes it easy for an artist to specify the right bounds right in the artwork without the developer having to do additional work.
  # *Limits* While the parser is reading the SVG, it estimates the bounds of the artwork from what is read. This may not always be correct, but can often be relied upon for simple artwork.
 
 Here is how to access the bounds and the limits:
