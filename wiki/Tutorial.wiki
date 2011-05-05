@@ -28,13 +28,26 @@ The following code in the `onCreate` method will make the activity render the SV
 
 == Some Tricks ==
 
+=== Canvas Drawing ===
+
 If you are drawing the SVG directly on to a Canvas, as opposed to populating an ImageView or some other pre-built container, then just use the `android.graphics.Picture` object instead:
 
 {{{
+    Canvas canvas;
     ...
     // Parse the SVG file from the resource
     SVG svg = SVGParser.getSVGFromResource(this, R.raw.android);
+    // Get the picture
     Picture picture = svg.getPicture();
+    // Draw picture in canvas
+    // Note: use transforms such as translate, scale and rotate to position the picture correctly
+    canvas.drawPicture(picture);
     ...
 }}}
-    
+
+=== Color Substitution ===
+
+Upon loading the SVG, you can substitute one color in the SVG for another. For example, to make the green Android blue instead:
+
+{{{
+}}}
