@@ -81,14 +81,15 @@ Here is how to access the bounds and the limits:
 
 *Loading SVGs From Other Sources*
 
-SVGs can also be placed in the project's `assets` directory, and the loaded using the application's asset management facility:
+In addition to loading SVGs from resources, they can also be placed in the project's `assets` directory, and then loaded using the application's asset management facility:
 
 {{{
-        try {
-            final SVG svg = SVGParser.getSVGFromAsset(getAssets(), "android.svg");
-        } catch (IOException e) {
-            // Handle IOException here
-        }
+    try {
+        // Specify the path (relative to the 'assets' folder)
+        final SVG svg = SVGParser.getSVGFromAsset(getAssets(), "android.svg");
+    } catch (IOException e) {
+        // Handle IOException here
+    }
 }}}
 
 Alternatively, an SVG can be loaded from a raw `InputStream` (UTF-8 encoding is assumed):
