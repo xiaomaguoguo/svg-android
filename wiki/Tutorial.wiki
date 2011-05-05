@@ -70,4 +70,8 @@ Upon loading the SVG, you can substitute one color in the SVG for another. For e
         SVG svg = SVGParser.getSVGFromResource(getResources(), R.raw.android, 0xFF9FBF3B, 0xFF1756c9);
 }}}
 
-Future versions of the library will support multiple color-swapping.
+Future versions of the library will support substitutions of multiple colors.
+
+== More Information ==
+
+To learn more, visit the [http://svg-android.googlecode.com/svn/trunk/svgandroid/docs/index.html Javadocs] or browse the [http://code.google.com/p/svg-android/source/browse/#svn%2Ftrunk%2Fsvgandroid%2Fsrc%2Fcom%2Flarvalabs%2Fsvgandroid source code] directly. Also be sure to take a look at how the SVG library is used in the extensive [http://code.google.com/p/svg-android/source/browse/#svn%2Ftrunk%2Fsvgwallpaper Androidify Wallpaper] demo, for which the full source code is available.
