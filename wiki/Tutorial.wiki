@@ -4,12 +4,24 @@
 
 Download the jar file [http://code.google.com/p/svg-android/downloads/detail?name=svg-android.jar here] and place it in the `libs` folder of your project.
 
-todo
+== Simple Example ==
 
+Suppose we have a new Android project with a blank Activity, the svg-android.jar file in the `libs` directory, and [http://code.google.com/p/svg-android/downloads/detail?name=android.svg this] SVG file in the `res/raw` folder.
 
-= Details =
+The following code in the `onCreate` method will make the activity render the SVG file:
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+{{{
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // Create a new ImageView
+        ImageView imageView = new ImageView(this);
+        // Set the background color to white
+        imageView.setBackgroundColor(Color.WHITE);
+        // Parse the SVG file from the resource
+        SVG svg = SVGParser.getSVGFromResource(this, R.raw.android);
+        // Get a drawable from the parsed SVG and set it as the drawable for the ImageView
+        imageView.setImageDrawable(svg.createPictureDrawable());
+        // Set the ImageView as the content view for the Activity
+        setContentView(imageView);
+    }
+}}}
