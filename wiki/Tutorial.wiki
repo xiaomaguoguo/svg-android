@@ -92,7 +92,7 @@ In addition to loading SVGs from resources, they can also be placed in the proje
     }
 }}}
 
-Alternatively, an SVG can be loaded from a raw `InputStream` (UTF-8 encoding is assumed):
+For complete control, an SVG can be loaded from a raw `InputStream` (UTF-8 encoding is assumed):
 
 {{{
         InputStream input;
