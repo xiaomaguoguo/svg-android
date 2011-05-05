@@ -28,7 +28,7 @@ The following code in the `onCreate` method will make the activity render the SV
 
 == How to Prepare Your Vector Images ==
 
-This library supports a subset of the [http://www.w3.org/TR/SVGMobile/ SVG Basic 1.1] specification. Typically, you can just load your vector artwork in Illustrator and then _Save As_ the artwork as SVG Basic and it will work fine. These are the features of SVG Basic not supported:
+This library supports a subset of the [http://www.w3.org/TR/SVGMobile/ SVG Basic 1.1] specification. Typically, you can just load your vector artwork in Illustrator and then save it as a SVG file (selecting the SVG Basic 1.1 option when asked) and it will work fine. These are the features of SVG Basic not supported:
 
   * All text and font features.
   * Raster images (bitmaps).
@@ -38,7 +38,7 @@ This library supports a subset of the [http://www.w3.org/TR/SVGMobile/ SVG Basic
   * Masks, filters and views.
   * Interactivity, linking, scripting and animation.
 
-If your vector image includes text, you can right-click on the text object in Illustrator and choose _Create Outlines_. This converts the text in to standard paths, which will then work fine with the library.
+If your artwork includes text, you can right-click on the text object in Illustrator and choose _Create Outlines_. This converts the text in to standard paths, which will then work fine with the library.
 
 Not all Illustrator effects (such as drop shadow) will work as they result in the creation of raster images when saved as SVG Basic.
 
