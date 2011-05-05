@@ -4,7 +4,7 @@
 
 Download the jar file [http://code.google.com/p/svg-android/downloads/detail?name=svg-android.jar here] and place it in the `libs` folder of your project.
 
-== Simple Example ==
+== A Simple Example ==
 
 Suppose we have a new Android project with a blank Activity, the svg-android.jar file in the `libs` directory, and [http://code.google.com/p/svg-android/downloads/detail?name=android.svg this] SVG file in the `res/raw` folder.
 
