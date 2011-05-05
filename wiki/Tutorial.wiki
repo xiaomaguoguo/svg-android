@@ -25,3 +25,16 @@ The following code in the `onCreate` method will make the activity render the SV
         setContentView(imageView);
     }
 }}}
+
+== Some Tricks ==
+
+If you are drawing the SVG directly on to a Canvas, as opposed to populating an ImageView or some other pre-built container, then just use the `android.graphics.Picture` object instead:
+
+{{{
+    ...
+    // Parse the SVG file from the resource
+    SVG svg = SVGParser.getSVGFromResource(this, R.raw.android);
+    Picture picture = svg.getPicture();
+    ...
+}}}
+    
