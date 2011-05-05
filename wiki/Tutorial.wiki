@@ -1,6 +1,8 @@
 #summary A quick tutorial for using svg-android.
 
-= Introduction =
+== Downloading ==
+
+Download the jar file [http://code.google.com/p/svg-android/downloads/detail?name=svg-android.jar here] and place it in the `libs` folder of your project.
 
 todo
 
