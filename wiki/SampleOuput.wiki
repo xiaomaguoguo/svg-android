@@ -1,4 +1,4 @@
-#summary Examples of things you can generate with this library.
+#summary Some examples of what you can generate with this library.
 
 = SVG Sample Images =
 
