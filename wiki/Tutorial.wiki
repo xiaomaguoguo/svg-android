@@ -18,7 +18,7 @@ The following code in the `onCreate` method will make the activity render the SV
         // Set the background color to white
         imageView.setBackgroundColor(Color.WHITE);
         // Parse the SVG file from the resource
-        SVG svg = SVGParser.getSVGFromResource(this, R.raw.android);
+        SVG svg = SVGParser.getSVGFromResource(getResources(), R.raw.android);
         // Get a drawable from the parsed SVG and set it as the drawable for the ImageView
         imageView.setImageDrawable(svg.createPictureDrawable());
         // Set the ImageView as the content view for the Activity
@@ -52,7 +52,7 @@ If you are drawing the SVG directly on to a Canvas, as opposed to populating an 
     Canvas canvas;
     // ...
     // Parse the SVG file from the resource
-    SVG svg = SVGParser.getSVGFromResource(this, R.raw.android);
+    SVG svg = SVGParser.getSVGFromResource(getResources(), R.raw.android);
     // Get the picture
     Picture picture = svg.getPicture();
     // Draw picture in canvas
@@ -72,7 +72,7 @@ Here is how to access the bounds and the limits:
 
 {{{
     // Parse SVG
-    SVG svg = SVGParser.getSVGFromResource(this, R.raw.android);
+    SVG svg = SVGParser.getSVGFromResource(getResources(), R.raw.android);
     // Get the artist-specified bounds (will be null if not specified)
     RectF bounds = svg.getBounds();
     // Get the parser-estimated bounds (could also be null, for example if it is a blank SVG)
