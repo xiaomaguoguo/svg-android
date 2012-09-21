@@ -36,7 +36,6 @@ This library supports a subset of the [http://www.w3.org/TR/SVGMobile/ SVG Basic
   * Patterns.
   * Masks, filters and views.
   * Interactivity, linking, scripting and animation.
-  * Arc commands in paths (work on this is in progress).
 
 If your artwork includes text, you can right-click on the text object in Illustrator and choose _Create Outlines_. This converts the text in to standard paths, which will then work fine with the library.
 
